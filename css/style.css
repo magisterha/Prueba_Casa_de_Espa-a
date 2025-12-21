@@ -113,6 +113,45 @@ header {
     color: var(--rojo-espana);
 }
 
+/* --- 2.1 MENÚ DESPLEGABLE (NUEVO) --- */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--blanco);
+    min-width: 220px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1000;
+    border-top: 3px solid var(--rojo-espana);
+    border-radius: 0 0 5px 5px;
+}
+
+.dropdown-content a {
+    color: var(--oscuro);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--gris-claro);
+    color: var(--rojo-espana);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn i {
+    margin-left: 5px;
+    font-size: 0.8rem;
+}
+
 /* =========================================
    3. SECCIÓN HERO (PORTADA)
    ========================================= */
@@ -260,12 +299,91 @@ footer {
 .footer-bottom { border-top: 1px solid #444; padding-top: 20px; text-align: center; font-size: 0.8rem; }
 
 /* =========================================
-   7. RESPONSIVE (MÓVILES)
+   7. PÁGINAS INTERNAS (Bienvenida, etc)
+   ========================================= */
+.page-header {
+    background: var(--rojo-espana);
+    color: var(--blanco);
+    padding: 40px 0;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-family: var(--fuente-titulos);
+    font-size: 2.5rem;
+}
+
+.welcome-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 50px;
+    align-items: start;
+    margin-bottom: 80px;
+}
+
+.welcome-img img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: var(--sombra);
+    border: 5px solid white;
+}
+
+.img-caption {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.img-caption strong {
+    display: block;
+    color: var(--rojo-espana);
+    font-size: 1.1rem;
+}
+
+.welcome-text h2 {
+    font-family: var(--fuente-titulos);
+    color: var(--rojo-espana);
+    margin-bottom: 20px;
+}
+
+.welcome-text p {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.greeting {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.highlight-box {
+    background-color: var(--gris-claro);
+    border-left: 4px solid var(--amarillo-espana);
+    padding: 20px;
+    margin: 20px 0;
+    font-style: italic;
+}
+
+.signature {
+    margin-top: 40px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.signature h3 {
+    font-family: var(--fuente-titulos);
+    color: var(--oscuro);
+}
+
+/* =========================================
+   8. RESPONSIVE (MÓVILES)
    ========================================= */
 @media (max-width: 768px) {
     .menu-toggle { display: block; }
     .nav-menu {
-        display: none; /* Se activará con JS */
+        display: none;
         position: absolute;
         top: 80px;
         left: 0;
@@ -276,13 +394,21 @@ footer {
     }
     .nav-menu ul { flex-direction: column; }
     .hero-content h1 { font-size: 2rem; }
+    
+    /* Ajustes móviles para páginas internas */
+    .welcome-grid { grid-template-columns: 1fr; gap: 30px; }
+    .welcome-img { max-width: 300px; margin: 0 auto; }
+    
+    /* Ajustes móviles para dropdown */
+    .dropdown-content { position: static; box-shadow: none; border-top: none; padding-left: 20px; background-color: #f9f9f9; display: none; }
+    .dropdown:hover .dropdown-content { display: block; }
 }
 
 /* =========================================
-   8. ESTILOS DE IMPRESIÓN (PDF)
+   9. ESTILOS DE IMPRESIÓN
    ========================================= */
 @media print {
-    header, footer, .hero-btns, .cta-banner, .read-more {
+    header, footer, .hero-btns, .cta-banner, .read-more, .menu-toggle {
         display: none !important;
     }
     body {
