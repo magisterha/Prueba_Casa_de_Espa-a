@@ -1,51 +1,51 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casa de España en Taiwán | Tu comunidad española</title>
-    <meta name="description" content="Punto de encuentro para españoles y amigos de la cultura española en Taiwán. Eventos, boletines y comunidad.">
+    <title>台灣西班牙之家協會 | 您的西班牙社群</title>
+    <meta name="description" content="台灣西班牙之家協會，連結在台西班牙人與熱愛西班牙文化的社群。活動、通訊與交流。">
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body { font-family: 'Noto Sans TC', 'Open Sans', sans-serif; }
+        h1, h2, h3, .nav-menu a { font-family: 'Noto Sans TC', 'Montserrat', sans-serif; }
+        .lang-switch { margin-left: 15px; border: 1px solid var(--rojo-espana); padding: 5px 10px; border-radius: 20px; font-size: 0.85rem; }
+        .lang-switch a { margin: 0 5px; }
+        .lang-switch a.active { color: var(--rojo-espana); font-weight: bold; }
+    </style>
 </head>
 <body>
 
     <header>
         <div class="container nav-container">
             <div class="logo">
-                <a href="index.html">
+                <a href="index-zh.html">
                     <img src="img/logo-casa-espana.png" alt="Logo Casa de España en Taiwán">
-                    <span>Casa de España en Taiwán</span>
+                    <span>台灣西班牙之家協會</span>
                 </a>
             </div>
             
-            <button class="menu-toggle" aria-label="Abrir menú">
+            <button class="menu-toggle" aria-label="開啟選單">
                 <i class="fas fa-bars"></i>
             </button>
 
             <nav class="nav-menu">
                 <ul>
-                    <li><a href="index.html" class="active">Inicio</a></li>
-                    
-                    <li class="dropdown">
-                        <a href="#" class="dropbtn">Quiénes Somos <i class="fas fa-caret-down"></i></a>
-                        <div class="dropdown-content">
-                            <a href="bienvenida.html">Bienvenida del Presidente</a>
-                            <a href="presentacion.html">Presentación</a>
-                            <a href="equipo.html">Equipo Directivo</a>
-                            <a href="estatutos.html">Estatutos</a>
-                        </div>
+                    <li class="lang-switch">
+                        <a href="index.html">ES</a> | <a href="index-zh.html" class="active">中文</a>
                     </li>
 
-                    <li><a href="actividades.html">Actividades</a></li>
-                    <li><a href="boletin.html">Boletín</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                    <li><a href="hazte-socio.html" class="btn-nav">Hazte Socio</a></li>
-                </ul>
+                    <li><a href="index-zh.html" class="active">首頁</a></li> <li class="dropdown">
+                        <a href="#" class="dropbtn">關於我們 <i class="fas fa-caret-down"></i></a> <div class="dropdown-content">
+                            <a href="bienvenida.html">會長致詞</a> <a href="presentacion.html">協會簡介</a> <a href="equipo.html">行政團隊</a> <a href="estatutos.html">組織章程</a> </div>
+                    </li>
+
+                    <li><a href="actividades.html">活動剪影</a></li> <li><a href="boletin.html">通訊報</a></li> <li><a href="contacto.html">聯絡我們</a></li> <li><a href="hazte-socio.html" class="btn-nav">加入會員</a></li> </ul>
             </nav>
         </div>
     </header>
@@ -53,55 +53,55 @@
     <main>
         <section class="hero">
             <div class="container hero-content">
-                <h1>Tu punto de encuentro en Taiwán</h1>
-                <p>Unimos la cultura española y la comunidad en la isla Formosa. Únete a nosotros.</p>
+                <h1>您在台灣的西班牙聚會點</h1>
+                <p>連結西班牙文化與福爾摩沙的社群。歡迎加入我們。</p>
                 <div class="hero-btns">
-                    <a href="actividades.html" class="btn-primary">Ver Eventos</a>
-                    <a href="bienvenida.html" class="btn-secondary">Saber más</a>
+                    <a href="actividades.html" class="btn-primary">查看活動</a>
+                    <a href="bienvenida.html" class="btn-secondary">了解更多</a>
                 </div>
             </div>
         </section>
 
         <section class="latest-news container">
             <div class="section-title">
-                <h2>Actividades Recientes</h2>
-                <p>Mantente al día con nuestros últimos eventos y encuentros.</p>
+                <h2>近期活動</h2>
+                <p>掌握我們最新的活動與聚會資訊。</p>
             </div>
             
             <div class="cards-grid">
                 <article class="card">
                     <div class="card-img">
-                        <img src="img/evento-reyes.jpg" alt="Comida de Reyes 2025">
+                        <img src="img/evento-reyes.jpg" alt="2025年三王節聚餐">
                     </div>
                     <div class="card-body">
-                        <span class="date">12 Ene 2025</span>
-                        <h3>Comida de Reyes 2025</h3>
-                        <p>Crónica de nuestra tradicional reunión para celebrar el día de Reyes en Taipei...</p>
-                        <a href="actividades/comida-reyes-2025.html" class="read-more">Leer más &rarr;</a>
+                        <span class="date">2025年1月12日</span>
+                        <h3>2025年三王節聚餐</h3>
+                        <p>我們在台北慶祝傳統三王節的聚餐報導...</p>
+                        <a href="actividades/comida-reyes-2025.html" class="read-more">閱讀更多 &rarr;</a>
                     </div>
                 </article>
 
                 <article class="card">
                     <div class="card-img">
-                        <img src="img/dia-poesia.jpg" alt="Día de la Poesía">
+                        <img src="img/dia-poesia.jpg" alt="世界詩歌日">
                     </div>
                     <div class="card-body">
-                        <span class="date">10 Abr 2025</span>
-                        <h3>Día Mundial de la Poesía</h3>
-                        <p>Una noche de versos compartida entre socios y amigos de la literatura española.</p>
-                        <a href="actividades/dia-poesia-2025.html" class="read-more">Leer más &rarr;</a>
+                        <span class="date">2025年4月10日</span>
+                        <h3>世界詩歌日</h3>
+                        <p>一個會員與朋友分享西班牙文學詩詞的美好夜晚。</p>
+                        <a href="actividades/dia-poesia-2025.html" class="read-more">閱讀更多 &rarr;</a>
                     </div>
                 </article>
 
                 <article class="card">
                     <div class="card-img">
-                        <img src="img/boletin-thumb.jpg" alt="Boletín Mensual">
+                        <img src="img/boletin-thumb.jpg" alt="每月通訊">
                     </div>
                     <div class="card-body">
-                        <span class="date">Dic 2025</span>
-                        <h3>Nuevo Boletín Mensual</h3>
-                        <p>Ya está disponible la nueva edición de nuestro boletín informativo nativo web.</p>
-                        <a href="boletin.html" class="read-more">Ver boletines &rarr;</a>
+                        <span class="date">2025年12月</span>
+                        <h3>最新每月通訊</h3>
+                        <p>我們的最新網頁版通訊報已經發布，歡迎閱讀。</p>
+                        <a href="boletin.html" class="read-more">查看通訊報 &rarr;</a>
                     </div>
                 </article>
             </div>
@@ -109,9 +109,9 @@
 
         <section class="cta-banner">
             <div class="container">
-                <h2>¿Aún no eres socio?</h2>
-                <p>Únete a la Casa de España y disfruta de eventos exclusivos, redes de contacto y apoyo en Taiwán.</p>
-                <a href="hazte-socio.html" class="btn-white">Información para socios</a>
+                <h2>還不是會員嗎？</h2>
+                <p>加入台灣西班牙之家，享受專屬活動、拓展人脈並獲得在台支援。</p>
+                <a href="hazte-socio.html" class="btn-white">會員資訊</a>
             </div>
         </section>
     </main>
@@ -119,29 +119,29 @@
     <footer>
         <div class="container footer-grid">
             <div class="footer-info">
-                <h3>Casa de España en Taiwán</h3>
-                <p>Asociación cultural sin fines de lucro dedicada a promover la cultura española.</p>
+                <h3>台灣西班牙之家協會</h3>
+                <p>致力於推廣西班牙文化的非營利文化協會。</p>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-facebook"></i></a>
                     <a href="#"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
             <div class="footer-links">
-                <h4>Enlaces Útiles</h4>
+                <h4>常用連結</h4>
                 <ul>
-                    <li><a href="https://www.exteriores.gob.es/Consulados/taipei/es/Paginas/index.aspx" target="_blank">Sec. Consular de España</a></li>
-                    <li><a href="https://espanaexterior.com" target="_blank">España Exterior</a></li>
-                    <li><a href="patrocinadores.html">Patrocinadores</a></li>
+                    <li><a href="https://www.exteriores.gob.es/Consulados/taipei/es/Paginas/index.aspx" target="_blank">西班牙商務辦事處 (領事事務)</a></li>
+                    <li><a href="https://espanaexterior.com" target="_blank">西班牙海外網 (España Exterior)</a></li>
+                    <li><a href="patrocinadores.html">贊助商</a></li>
                 </ul>
             </div>
             <div class="footer-contact">
-                <h4>Contacto</h4>
-                <p><i class="fas fa-map-marker-alt"></i> Taipei, Taiwán</p>
+                <h4>聯絡資訊</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 台北市，台灣</p>
                 <p><i class="fas fa-envelope"></i> casaespanataiwan@example.com</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 Casa de España en Taiwán. Todos los derechos reservados.</p>
+            <p>&copy; 2025 台灣西班牙之家協會 (Casa de España en Taiwán). 版權所有.</p>
         </div>
     </footer>
 
