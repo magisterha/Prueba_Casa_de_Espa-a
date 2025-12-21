@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividades | Casa de España en Taiwán</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .zh-text { font-family: 'Noto Sans TC', sans-serif; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo-casa-espana.png" alt="Logo Casa de España en Taiwán">
+                    <span>Casa de España en Taiwán</span>
+                </a>
+            </div>
+            
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li class="lang-switch">
+                        <a href="index.html">ES</a> | <a href="index-zh.html">中文</a>
+                    </li>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Quiénes Somos <i class="fas fa-caret-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="bienvenida.html">Bienvenida del Presidente</a>
+                            <a href="presentacion.html">Presentación</a>
+                            <a href="equipo.html">Equipo Directivo</a>
+                            <a href="estatutos.html">Estatutos</a>
+                        </div>
+                    </li>
+                    <li><a href="actividades.html" class="active">Actividades</a></li>
+                    <li><a href="boletin.html">Boletín</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="hazte-socio.html" class="btn-nav">Hazte Socio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Agenda de Actividades / 活動日程</h1>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="lang-tabs">
+                <button class="tab-btn active" data-tab="es">
+                    <i class="fas fa-globe"></i> Español
+                </button>
+                <button class="tab-btn" data-tab="zh">
+                    <i class="fas fa-language"></i> 中文 (Chino)
+                </button>
+            </div>
+        </div>
+
+        <div id="es" class="tab-content active">
+            
+            <section class="container upcoming-events">
+                <h2 class="section-title-left"><i class="far fa-calendar-alt"></i> Próximos Eventos</h2>
+                
+                <div class="event-card-large">
+                    <div class="event-img">
+                        <img src="img/evento-reyes.jpg" alt="Cena de Navidad">
+                        <span class="event-badge future">Abierto</span>
+                    </div>
+                    <div class="event-info">
+                        <div class="event-date">
+                            <span class="day">12</span>
+                            <span class="month">DIC</span>
+                        </div>
+                        <div class="event-details">
+                            <h3>Cena de Navidad 2025</h3>
+                            <p class="meta"><i class="fas fa-clock"></i> 19:30 - 22:00 | <i class="fas fa-map-marker-alt"></i> Restaurante El Marqués, Taipei</p>
+                            <p class="description">Únete a nosotros para celebrar la navidad con un menú especial, sorteos y la mejor compañía. Plazas limitadas.</p>
+                            <a href="contacto.html" class="btn-primary small">Inscribirse</a>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <hr class="section-divider">
+
+            <section class="container past-events">
+                <h2 class="section-title-left"><i class="fas fa-history"></i> Memoria de Actividades</h2>
+                
+                <div class="cards-grid">
+                    
+                    <article class="card">
+                        <div class="card-img">
+                            <img src="img/dia-poesia.jpg" alt="Día de la Poesía">
+                            <span class="event-badge past">Finalizado</span>
+                        </div>
+                        <div class="card-body">
+                            <span class="date">10 Abr 2025</span>
+                            <h3>Día Mundial de la Poesía</h3>
+                            <p>Recital poético con lectura de obras de autores españoles y taiwaneses.</p>
+                            <a href="#" class="read-more">Ver fotos &rarr;</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img">
+                            <img src="img/evento-reyes.jpg" alt="Comida de Reyes">
+                            <span class="event-badge past">Finalizado</span>
+                        </div>
+                        <div class="card-body">
+                            <span class="date">12 Ene 2025</span>
+                            <h3>Comida de Reyes</h3>
+                            <p>Tradicional encuentro gastronómico para empezar el año.</p>
+                            <a href="#" class="read-more">Ver fotos &rarr;</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img">
+                            <img src="img/hero-background.jpg" alt="Asamblea General">
+                            <span class="event-badge past">Finalizado</span>
+                        </div>
+                        <div class="card-body">
+                            <span class="date">Nov 2024</span>
+                            <h3>Asamblea General</h3>
+                            <p>Reunión anual de socios para aprobación de cuentas y proyectos.</p>
+                            <a href="#" class="read-more">Leer acta &rarr;</a>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+        </div>
+
+        <div id="zh" class="tab-content zh-text">
+            
+            <section class="container upcoming-events">
+                <h2 class="section-title-left"><i class="far fa-calendar-alt"></i> 即將舉辦的活動</h2>
+                
+                <div class="event-card-large">
+                    <div class="event-img">
+                        <img src="img/evento-reyes.jpg" alt="聖誕晚宴">
+                        <span class="event-badge future">報名中</span>
+                    </div>
+                    <div class="event-info">
+                        <div class="event-date">
+                            <span class="day">12</span>
+                            <span class="month">12月</span>
+                        </div>
+                        <div class="event-details">
+                            <h3>2025年 聖誕晚宴</h3>
+                            <p class="meta"><i class="fas fa-clock"></i> 19:30 - 22:00 | <i class="fas fa-map-marker-alt"></i> El Marqués 餐廳, 台北</p>
+                            <p class="description">與我們一起慶祝聖誕節！特別菜單、抽獎活動以及最棒的陪伴。名額有限。</p>
+                            <a href="contacto.html" class="btn-primary small">立即報名</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <section class="container past-events">
+                <h2 class="section-title-left"><i class="fas fa-history"></i> 活動回顧</h2>
+                
+                <div class="cards-grid">
+                    
+                    <article class="card">
+                        <div class="card-img">
+                            <img src="img/dia-poesia.jpg" alt="世界詩歌日">
+                            <span class="event-badge past">已結束</span>
+                        </div>
+                        <div class="card-body">
+                            <span class="date">2025年4月10日</span>
+                            <h3>世界詩歌日</h3>
+                            <p>朗誦西班牙與台灣作家的詩歌作品。</p>
+                            <a href="#" class="read-more">查看照片 &rarr;</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img">
+                            <img src="img/evento-reyes.jpg" alt="三王節聚餐">
+                            <span class="event-badge past">已結束</span>
+                        </div>
+                        <div class="card-body">
+                            <span class="date">2025年1月12日</span>
+                            <h3>三王節聚餐</h3>
+                            <p>傳統的美食聚會，開啟新的一年。</p>
+                            <a href="#" class="read-more">查看照片 &rarr;</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img">
+                            <img src="img/hero-background.jpg" alt="會員大會">
+                            <span class="event-badge past">已結束</span>
+                        </div>
+                        <div class="card-body">
+                            <span class="date">2024年11月</span>
+                            <h3>年度會員大會</h3>
+                            <p>年度會議，核准財務報表與未來計畫。</p>
+                            <a href="#" class="read-more">閱讀會議記錄 &rarr;</a>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <h3>Casa de España en Taiwán</h3>
+                <p>Asociación cultural sin fines de lucro.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Enlaces Útiles</h4>
+                <ul>
+                    <li><a href="https://www.exteriores.gob.es/Consulados/taipei/es/Paginas/index.aspx" target="_blank">Sec. Consular de España</a></li>
+                    <li><a href="patrocinadores.html">Patrocinadores</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contacto</h4>
+                <p>Taipei, Taiwán</p>
+                <p>info@casaespanataiwan.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Casa de España en Taiwán.</p>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
