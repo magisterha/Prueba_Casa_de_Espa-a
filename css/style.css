@@ -426,3 +426,106 @@ footer {
         page-break-inside: avoid;
     }
 }
+
+/* =========================================
+   10. PÁGINA DE ESTATUTOS (PESTAÑAS)
+   ========================================= */
+
+/* Contenedor de los botones */
+.lang-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+/* Estilo de los botones de idioma */
+.tab-btn {
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: 700;
+    border: 2px solid var(--rojo-espana);
+    background: transparent;
+    color: var(--rojo-espana);
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Botón activo (seleccionado) */
+.tab-btn.active, .tab-btn:hover {
+    background: var(--rojo-espana);
+    color: var(--blanco);
+    box-shadow: var(--sombra);
+}
+
+/* Contenido de las pestañas */
+.tab-content {
+    display: none; /* Oculto por defecto */
+    animation: fadeIn 0.5s;
+}
+
+.tab-content.active {
+    display: block; /* Solo se muestra si tiene la clase active */
+}
+
+/* Diseño del documento legal */
+.legal-doc {
+    background: var(--blanco);
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: var(--sombra);
+    max-width: 900px;
+    margin: 0 auto;
+    border-top: 5px solid var(--amarillo-espana);
+}
+
+.legal-doc h2 {
+    text-align: center;
+    color: var(--oscuro);
+    margin-bottom: 40px;
+    font-family: var(--fuente-titulos);
+}
+
+.legal-doc h3 {
+    color: var(--rojo-espana);
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.legal-doc article {
+    margin-bottom: 30px;
+}
+
+.legal-doc h4 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.legal-doc ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-top: 10px;
+    color: #555;
+}
+
+/* Animación suave */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Caja de descarga */
+.download-box {
+    margin-top: 50px;
+    text-align: center;
+    padding: 30px;
+    background: var(--gris-claro);
+    border-radius: 10px;
+}
