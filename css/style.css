@@ -762,3 +762,150 @@ footer {
         border: none; /* En móvil quitamos el borde si prefieres */
     }
 }
+/* =========================================
+   13. PÁGINA ACTIVIDADES
+   ========================================= */
+
+.section-title-left {
+    font-family: var(--fuente-titulos);
+    color: var(--rojo-espana);
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    border-left: 5px solid var(--amarillo-espana);
+    padding-left: 15px;
+}
+
+.section-divider {
+    border: 0;
+    height: 1px;
+    background: #e0e0e0;
+    margin: 60px auto;
+    max-width: 1000px;
+}
+
+/* --- Tarjeta de Evento Grande (Futuro) --- */
+.event-card-large {
+    display: flex;
+    background: var(--blanco);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    transition: transform 0.3s;
+}
+
+.event-card-large:hover {
+    transform: translateY(-5px);
+}
+
+.event-card-large .event-img {
+    flex: 1;
+    min-height: 250px;
+    position: relative;
+}
+
+.event-card-large .event-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.event-card-large .event-info {
+    flex: 1.5;
+    padding: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.event-date {
+    background: var(--gris-claro);
+    color: var(--rojo-espana);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 80px;
+    height: fit-content;
+}
+
+.event-date .day {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.event-date .month {
+    display: block;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.event-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-family: var(--fuente-titulos);
+}
+
+.event-details .meta {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.event-details .meta i {
+    color: var(--amarillo-espana);
+    margin-right: 5px;
+    margin-left: 10px;
+}
+.event-details .meta i:first-child { margin-left: 0; }
+
+.event-details .description {
+    margin-bottom: 20px;
+}
+
+.btn-primary.small {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+}
+
+/* --- Badges (Etiquetas de estado) --- */
+.event-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.event-badge.future {
+    background-color: #28a745; /* Verde para abierto */
+}
+
+.event-badge.past {
+    background-color: #6c757d; /* Gris para pasado */
+}
+
+/* Responsive para la tarjeta grande */
+@media (max-width: 768px) {
+    .event-card-large {
+        flex-direction: column;
+    }
+    .event-card-large .event-img {
+        height: 200px;
+    }
+    .event-card-large .event-info {
+        flex-direction: column;
+    }
+    .event-date {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+}
