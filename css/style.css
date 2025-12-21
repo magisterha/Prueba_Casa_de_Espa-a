@@ -731,3 +731,34 @@ footer {
         transform: none; /* Quitar efecto zoom en móvil */
     }
 }
+/* =========================================
+   12. BOTÓN DE IDIOMAS (HEADER)
+   ========================================= */
+.lang-switch {
+    border: 1px solid var(--rojo-espana);
+    padding: 5px 15px;
+    border-radius: 20px;
+    margin-left: 10px;
+    display: inline-block; /* Asegura que se comporte como bloque en línea */
+}
+
+.lang-switch a {
+    margin: 0 5px;
+    font-size: 0.85rem;
+    text-decoration: none;
+}
+
+.lang-switch a.active {
+    font-weight: bold;
+    color: var(--rojo-espana);
+    pointer-events: none; /* Desactiva el clic en el idioma actual */
+}
+
+/* Ajuste para móvil */
+@media (max-width: 768px) {
+    .lang-switch {
+        margin: 10px 0;
+        text-align: center;
+        border: none; /* En móvil quitamos el borde si prefieres */
+    }
+}
