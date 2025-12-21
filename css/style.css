@@ -529,3 +529,205 @@ footer {
     background: var(--gris-claro);
     border-radius: 10px;
 }
+/* =========================================
+   11. PÁGINA HAZTE SOCIO
+   ========================================= */
+
+/* --- Pasos del Proceso --- */
+.join-process {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.process-intro {
+    max-width: 800px;
+    margin: 0 auto 50px;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.step-card {
+    background: var(--blanco);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--sombra);
+    position: relative;
+}
+
+.step-icon {
+    font-size: 2.5rem;
+    color: var(--rojo-espana);
+    margin-bottom: 20px;
+}
+
+.step-card h3 {
+    margin-bottom: 15px;
+    font-family: var(--fuente-titulos);
+}
+
+.step-link {
+    display: block;
+    margin-top: 15px;
+    color: var(--rojo-espana);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* --- Sección de Cuotas (Pricing) --- */
+.fees-section {
+    background-color: var(--gris-claro);
+    padding: 80px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.2rem;
+    font-family: var(--fuente-titulos);
+}
+
+.fees-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.fee-card {
+    background: var(--blanco);
+    border-radius: 10px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: var(--sombra);
+    border-top: 5px solid #ccc;
+    transition: transform 0.3s;
+}
+
+.fee-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Destacar la tarjeta titular */
+.fee-card.featured {
+    border-top-color: var(--rojo-espana);
+    transform: scale(1.05); /* Un poco más grande */
+    z-index: 10;
+}
+
+.fee-card.sponsor {
+    border-top-color: var(--amarillo-espana);
+}
+
+.fee-header h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--oscuro);
+}
+
+.fee-price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--rojo-espana);
+    margin-bottom: 20px;
+}
+
+.fee-price .currency {
+    font-size: 1rem;
+}
+
+.fee-price .period {
+    font-size: 0.8rem;
+    color: #888;
+    font-weight: 400;
+}
+
+.fee-body p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* --- Sección de Recursos (Banco y Formulario) --- */
+.resources-section {
+    padding: 80px 20px;
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.resource-box {
+    border: 2px dashed #ddd;
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+}
+
+.resource-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.form-box {
+    background-color: #fff9f9; /* Rojo muy pálido */
+    border-color: var(--rojo-espana);
+}
+
+.form-box .resource-icon { color: var(--rojo-espana); }
+
+.bank-box {
+    background-color: #fcfcf0; /* Amarillo muy pálido */
+    border-color: var(--amarillo-espana);
+}
+
+.bank-box .resource-icon { color: #d4a700; }
+
+.bank-details-card {
+    background: var(--blanco);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.account-number {
+    font-family: 'Courier New', monospace;
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    background: #eee;
+    padding: 10px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.note-box {
+    background: var(--oscuro);
+    color: var(--blanco);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.note-box h4 {
+    margin-bottom: 10px;
+    color: var(--amarillo-espana);
+}
+
+/* Responsive para recursos */
+@media (max-width: 768px) {
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+    .fee-card.featured {
+        transform: none; /* Quitar efecto zoom en móvil */
+    }
+}
