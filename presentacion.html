@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación | Casa de España en Taiwán</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .zh-text { font-family: 'Noto Sans TC', sans-serif; }
+        .text-content { max-width: 800px; margin: 0 auto; line-height: 1.8; font-size: 1.1rem; }
+        .text-content p { margin-bottom: 25px; text-align: justify; }
+        .highlight-quote { 
+            background: var(--gris-claro); 
+            border-left: 5px solid var(--rojo-espana); 
+            padding: 20px; 
+            font-style: italic; 
+            margin: 30px 0;
+        }
+        .activities-list { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+        .activity-tag {
+            background: var(--amarillo-espana);
+            color: var(--oscuro);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo-casa-espana.png" alt="Logo Casa de España en Taiwán">
+                    <span>Casa de España en Taiwán</span>
+                </a>
+            </div>
+            
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li class="lang-switch">
+                        <a href="index.html">ES</a> | <a href="index-zh.html">中文</a>
+                    </li>
+
+                    <li><a href="index.html">Inicio</a></li>
+                    
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn active">Quiénes Somos <i class="fas fa-caret-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="bienvenida.html">Bienvenida del Presidente</a>
+                            <a href="presentacion.html" class="active">Presentación</a> <a href="equipo.html">Equipo Directivo</a>
+                            <a href="estatutos.html">Estatutos</a>
+                        </div>
+                    </li>
+
+                    <li><a href="actividades.html">Actividades</a></li>
+                    <li><a href="boletin.html">Boletín</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="hazte-socio.html" class="btn-nav">Hazte Socio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Presentación de la Asociación</h1>
+                <p>Nuestra misión, visión y objetivos en la isla.</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="lang-tabs">
+                <button class="tab-btn active" data-tab="es">
+                    <i class="fas fa-globe"></i> Versión en Español
+                </button>
+                <button class="tab-btn" data-tab="zh">
+                    <i class="fas fa-language"></i> 中文介紹 (Versión en Chino)
+                </button>
+            </div>
+        </div>
+
+        <section class="container" style="padding-bottom: 80px;">
+            
+            <div id="es" class="tab-content active text-content">
+                
+                <p>La asociación <strong>Casa de España en Taiwán</strong> es una iniciativa llevada a cabo por un grupo de personas residentes en Taiwán, encaminada a la creación de una asociación legalmente constituida ante las autoridades locales, dedicada a servir de punto de encuentro de los españoles, hispanoamericanos y de todo aquel que, sea cual fuere su nacionalidad, se sienta atraído por la cultura y las costumbres de nuestra tierra.</p>
+
+                <div class="highlight-quote">
+                    <p>Como el resto de las asociaciones del tipo “CASA DE ESPAÑA EN…” que existen por todo el mundo, será una entidad sin ánimo de lucro, tal y como dice el artículo 2 de sus Estatutos fundacionales:</p>
+                    <p><em>“…cuyo objetivo principal será promocionar la cultura española en Taiwán, fomentando todo tipo de actividades sociales, culturales, educativas, recreativas y asistenciales, pretendiendo ser centro de acogida, reunión y convivencia de sus socios…”</em></p>
+                </div>
+
+                <p>Para ello se programarán actividades de todo tipo:</p>
+                
+                <div class="activities-list">
+                    <span class="activity-tag">Charlas</span>
+                    <span class="activity-tag">Conferencias</span>
+                    <span class="activity-tag">Cinefórum</span>
+                    <span class="activity-tag">Exposiciones</span>
+                    <span class="activity-tag">Jornadas Gastronómicas</span>
+                    <span class="activity-tag">Comidas de Encuentro</span>
+                    <span class="activity-tag">Excursiones</span>
+                    <span class="activity-tag">Fiestas</span>
+                    <span class="activity-tag">Juegos y Torneos</span>
+                    <span class="activity-tag">Actividades Infantiles</span>
+                    <span class="activity-tag">Apoyo a Empresas</span>
+                </div>
+            </div>
+
+            <div id="zh" class="tab-content text-content zh-text">
+                
+                <h2 style="text-align: center; margin-bottom: 30px; color: var(--rojo-espana);">協會簡介</h2>
+
+                <p><strong>台灣西班牙之家協會 (Casa de España en Taiwán)</strong> 是由一群居住在台灣的人士所發起的倡議，旨在建立一個在當地主管機關合法立案的協會。我們致力於成為西班牙人、拉丁美洲人以及所有不分國籍、對我們家鄉文化與習俗感興趣的人士的聚會點。</p>
+
+                <div class="highlight-quote">
+                    <p>如同世界各地存在的「西班牙之家」類型協會，本協會為非營利組織。正如其成立章程第二條所述：</p>
+                    <p><em>「……其主要目標是在台灣推廣西班牙文化，促進各類社會、文化、教育、娛樂及互助活動，並期望成為會員接待、聚會及聯誼的中心……」</em></p>
+                </div>
+
+                <p>為此，我們將規劃各式各樣的活動：</p>
+                
+                <div class="activities-list">
+                    <span class="activity-tag">講座</span>
+                    <span class="activity-tag">研討會</span>
+                    <span class="activity-tag">電影欣賞</span>
+                    <span class="activity-tag">展覽</span>
+                    <span class="activity-tag">美食饗宴</span>
+                    <span class="activity-tag">聚餐</span>
+                    <span class="activity-tag">郊遊</span>
+                    <span class="activity-tag">派對</span>
+                    <span class="activity-tag">遊戲與競賽</span>
+                    <span class="activity-tag">兒童及青少年活動</span>
+                    <span class="activity-tag">企業支援服務</span>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <h3>Casa de España en Taiwán</h3>
+                <p>Asociación cultural sin fines de lucro dedicada a promover la cultura española.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Enlaces Útiles</h4>
+                <ul>
+                    <li><a href="https://www.exteriores.gob.es/Consulados/taipei/es/Paginas/index.aspx" target="_blank">Sec. Consular de España</a></li>
+                    <li><a href="https://espanaexterior.com" target="_blank">España Exterior</a></li>
+                    <li><a href="patrocinadores.html">Patrocinadores</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contacto</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Taipei, Taiwán</p>
+                <p><i class="fas fa-envelope"></i> casaespanataiwan@example.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Casa de España en Taiwán. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
