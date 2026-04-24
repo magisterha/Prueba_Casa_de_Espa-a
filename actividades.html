@@ -11,6 +11,45 @@
 
     <style>
         .zh-text { font-family: 'Noto Sans TC', sans-serif; }
+        
+        /* Estilos básicos para que las tarjetas se vean bien */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+        .card-item {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 20px;
+            transition: transform 0.2s;
+            border: 1px solid #eee;
+        }
+        .card-item:hover {
+            transform: translateY(-5px);
+        }
+        .card-item h3 {
+            margin-top: 0;
+            font-size: 1.1rem;
+            color: #a52a2a; /* Color granate corporativo */
+        }
+        .card-item a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .card-item p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .btn-ver {
+            display: inline-block;
+            margin-top: 10px;
+            color: #a52a2a;
+            font-weight: bold;
+            font-size: 0.85rem;
+        }
     </style>
 </head>
 <body>
@@ -70,6 +109,45 @@
                 <h2 class="section-title-left"><i class="fas fa-history"></i> Memoria de Actividades</h2>
                 
                 <div class="cards-grid">
+                    <div class="card-item">
+                        <a href="31-cata-del-club-del-vino.html">
+                            <h3>31ª Cata del Club del Vino</h3>
+                            <p>Crónica de nuestra reunión mensual en torno a la cultura del vino.</p>
+                            <span class="btn-ver">Leer más <i class="fas fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+
+                    <div class="card-item">
+                        <a href="40-minutos-con-mario-santander.html">
+                            <h3>40 minutos con Mario Santander</h3>
+                            <p>Espacio de charla y entrevista con personalidades de nuestra comunidad.</p>
+                            <span class="btn-ver">Leer más <i class="fas fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+
+                    <div class="card-item">
+                        <a href="ruta-senderista-en-la-monta-a-elefante.html">
+                            <h3>Ruta senderista: Montaña Elefante</h3>
+                            <p>Actividad al aire libre recorriendo los senderos más emblemáticos.</p>
+                            <span class="btn-ver">Leer más <i class="fas fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+
+                    <div class="card-item">
+                        <a href="xv-asamblea-general-de-la-casa-de-espa-a-en-taiw-n.html">
+                            <h3>XV Asamblea General</h3>
+                            <p>Resumen y actas de la decimoquinta reunión anual de socios.</p>
+                            <span class="btn-ver">Leer más <i class="fas fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+
+                    <div class="card-item">
+                        <a href="cena-de-a-o-nuevo-chino-2024-de-la-casa-de-espa-a-en-taiw-n.html">
+                            <h3>Cena Año Nuevo Chino 2024</h3>
+                            <p>Celebración especial de la entrada del año del dragón.</p>
+                            <span class="btn-ver">Leer más <i class="fas fa-arrow-right"></i></span>
+                        </a>
+                    </div>
                     
                     </div>
             </section>
@@ -80,8 +158,22 @@
                 <h2 class="section-title-left"><i class="fas fa-history"></i> 活動回顧</h2>
                 
                 <div class="cards-grid">
-                    
+                    <div class="card-item">
+                        <a href="31-cata-del-club-del-vino.html">
+                            <h3>第31屆品酒俱樂部</h3>
+                            <p>關於我們每月品酒文化聚會的記錄。</p>
+                            <span class="btn-ver">閱讀更多 <i class="fas fa-arrow-right"></i></span>
+                        </a>
                     </div>
+                    
+                    <div class="card-item">
+                        <a href="cena-de-a-o-nuevo-chino-2024-de-la-casa-de-espa-a-en-taiw-n.html">
+                            <h3>2024年農曆新年晚宴</h3>
+                            <p>慶祝龍年到來的特別晚宴活動。</p>
+                            <span class="btn-ver">閱讀更多 <i class="fas fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </div>
             </section>
         </div>
 
