@@ -12,7 +12,7 @@
     <style>
         .zh-text { font-family: 'Noto Sans TC', sans-serif; }
         
-        /* Estilos básicos para que las tarjetas se vean bien */
+        /* Estilos del grid de tarjetas */
         .cards-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -33,7 +33,7 @@
         .card-item h3 {
             margin-top: 0;
             font-size: 1.1rem;
-            color: #a52a2a; /* Color granate corporativo */
+            color: #a52a2a;
         }
         .card-item a {
             text-decoration: none;
@@ -42,13 +42,43 @@
         .card-item p {
             font-size: 0.9rem;
             color: #666;
+            margin-bottom: 15px;
         }
         .btn-ver {
             display: inline-block;
-            margin-top: 10px;
             color: #a52a2a;
             font-weight: bold;
             font-size: 0.85rem;
+        }
+
+        /* Estilos para el botón Ver Más */
+        .contenedor-ver-mas {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .btn-cargar-mas {
+            background-color: #a52a2a;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn-cargar-mas:hover {
+            background-color: #7a1f1f;
+        }
+        .btn-cargar-mas i {
+            margin-left: 8px;
+        }
+
+        /* Animación suave al aparecer nuevas tarjetas */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
@@ -108,7 +138,7 @@
             <section class="container past-events">
                 <h2 class="section-title-left"><i class="fas fa-history"></i> Memoria de Actividades</h2>
                 
-                <div class="cards-grid">
+                <div class="cards-grid" id="grid-es">
                     <div class="card-item">
                         <a href="31-cata-del-club-del-vino.html">
                             <h3>31ª Cata del Club del Vino</h3>
@@ -116,7 +146,6 @@
                             <span class="btn-ver">Leer más <i class="fas fa-arrow-right"></i></span>
                         </a>
                     </div>
-
                     <div class="card-item">
                         <a href="40-minutos-con-mario-santander.html">
                             <h3>40 minutos con Mario Santander</h3>
@@ -124,7 +153,6 @@
                             <span class="btn-ver">Leer más <i class="fas fa-arrow-right"></i></span>
                         </a>
                     </div>
-
                     <div class="card-item">
                         <a href="ruta-senderista-en-la-monta-a-elefante.html">
                             <h3>Ruta senderista: Montaña Elefante</h3>
@@ -132,7 +160,6 @@
                             <span class="btn-ver">Leer más <i class="fas fa-arrow-right"></i></span>
                         </a>
                     </div>
-
                     <div class="card-item">
                         <a href="xv-asamblea-general-de-la-casa-de-espa-a-en-taiw-n.html">
                             <h3>XV Asamblea General</h3>
@@ -140,7 +167,6 @@
                             <span class="btn-ver">Leer más <i class="fas fa-arrow-right"></i></span>
                         </a>
                     </div>
-
                     <div class="card-item">
                         <a href="cena-de-a-o-nuevo-chino-2024-de-la-casa-de-espa-a-en-taiw-n.html">
                             <h3>Cena Año Nuevo Chino 2024</h3>
@@ -148,28 +174,51 @@
                             <span class="btn-ver">Leer más <i class="fas fa-arrow-right"></i></span>
                         </a>
                     </div>
-                    
+                    <div class="card-item">
+                        <a href="primera-charla-choque-cultural-oriente-occidente.html">
+                            <h3>1ª Charla: Choque Cultural</h3>
+                            <p>Análisis de las diferencias culturales entre Oriente y Occidente.</p>
+                            <span class="btn-ver">Leer más <i class="fas fa-arrow-right"></i></span>
+                        </a>
                     </div>
+                    <div class="card-item">
+                        <a href="f-tbol-cl-sico-en-la-casa-de-espa-a.html">
+                            <h3>Fútbol Clásico</h3>
+                            <p>Encuentro deportivo y jornada de convivencia en la Casa de España.</p>
+                            <span class="btn-ver">Leer más <i class="fas fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                    <div class="card-item">
+                        <a href="el-club-del-vino-llega-a-su-trig-sima-cata-en-plena-forma.html">
+                            <h3>30ª Cata: En plena forma</h3>
+                            <p>El Club del Vino celebra una cata muy especial por su trigésima edición.</p>
+                            <span class="btn-ver">Leer más <i class="fas fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                    <div class="card-item">
+                        <a href="cr-nica-1er-cinef-rum-de-kaohsiung-hou-hsiao-hsien.html">
+                            <h3>1er Cinefórum de Kaohsiung</h3>
+                            <p>Proyección y debate sobre la obra del aclamado director Hou Hsiao-Hsien.</p>
+                            <span class="btn-ver">Leer más <i class="fas fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                    </div>
+
+                <div class="contenedor-ver-mas">
+                    <button id="btn-ver-mas-es" class="btn-cargar-mas">Cargar más actividades <i class="fas fa-plus-circle"></i></button>
+                </div>
+
             </section>
         </div>
 
         <div id="zh" class="tab-content zh-text">
             <section class="container past-events">
                 <h2 class="section-title-left"><i class="fas fa-history"></i> 活動回顧</h2>
-                
                 <div class="cards-grid">
                     <div class="card-item">
                         <a href="31-cata-del-club-del-vino.html">
                             <h3>第31屆品酒俱樂部</h3>
                             <p>關於我們每月品酒文化聚會的記錄。</p>
-                            <span class="btn-ver">閱讀更多 <i class="fas fa-arrow-right"></i></span>
-                        </a>
-                    </div>
-                    
-                    <div class="card-item">
-                        <a href="cena-de-a-o-nuevo-chino-2024-de-la-casa-de-espa-a-en-taiw-n.html">
-                            <h3>2024年農曆新年晚宴</h3>
-                            <p>慶祝龍年到來的特別晚宴活動。</p>
                             <span class="btn-ver">閱讀更多 <i class="fas fa-arrow-right"></i></span>
                         </a>
                     </div>
@@ -184,16 +233,11 @@
             <div class="footer-info">
                 <h3>Casa de España en Taiwán</h3>
                 <p>Asociación cultural sin fines de lucro.</p>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fas fa-envelope"></i></a>
-                </div>
             </div>
             <div class="footer-links">
                 <h4>Enlaces Útiles</h4>
                 <ul>
                     <li><a href="https://www.exteriores.gob.es/Consulados/taipei/es/Paginas/index.aspx" target="_blank">Sec. Consular de España</a></li>
-                    <li><a href="patrocinadores.html">Patrocinadores</a></li>
                 </ul>
             </div>
             <div class="footer-bottom">
@@ -203,5 +247,48 @@
     </footer>
     
     <script src="js/main.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Seleccionamos todas las tarjetas de la sección en español
+            const tarjetasEs = Array.from(document.querySelectorAll('#grid-es .card-item'));
+            const btnVerMas = document.getElementById('btn-ver-mas-es');
+            
+            // Configuración: ¿Cuántas queremos mostrar al principio y de cuántas en cuántas cargar?
+            let tarjetasVisibles = 6; 
+            const tarjetasPorClic = 6;
+            
+            // 1. Ocultar las tarjetas que pasen del límite inicial
+            tarjetasEs.forEach((tarjeta, index) => {
+                if(index >= tarjetasVisibles) {
+                    tarjeta.style.display = 'none';
+                }
+            });
+            
+            // 2. Comprobar si necesitamos mostrar el botón al cargar la página
+            if(tarjetasEs.length <= tarjetasVisibles) {
+                btnVerMas.style.display = 'none';
+            }
+            
+            // 3. Acción al hacer clic en el botón
+            btnVerMas.addEventListener('click', function() {
+                let limiteCarga = tarjetasVisibles + tarjetasPorClic;
+                
+                // Mostrar las siguientes tarjetas
+                for(let i = tarjetasVisibles; i < limiteCarga && i < tarjetasEs.length; i++) {
+                    tarjetasEs[i].style.display = 'block'; 
+                    tarjetasEs[i].style.animation = 'fadeIn 0.5s ease'; // Añade una animación suave
+                }
+                
+                // Actualizar el contador de tarjetas visibles
+                tarjetasVisibles = limiteCarga;
+                
+                // Si ya hemos mostrado todas, esconder el botón
+                if(tarjetasVisibles >= tarjetasEs.length) {
+                    btnVerMas.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
