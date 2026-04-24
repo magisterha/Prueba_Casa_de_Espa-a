@@ -1,4 +1,119 @@
-<main>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividades | Casa de España en Taiwán</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .zh-text { font-family: 'Noto Sans TC', sans-serif; }
+        
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+        .card-item {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 20px;
+            transition: transform 0.2s;
+            border: 1px solid #eee;
+        }
+        .card-item:hover {
+            transform: translateY(-5px);
+        }
+        .card-item h3 {
+            margin-top: 0;
+            font-size: 1.1rem;
+            color: #a52a2a;
+        }
+        .card-item a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .card-item p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        .btn-ver {
+            display: inline-block;
+            color: #a52a2a;
+            font-weight: bold;
+            font-size: 0.85rem;
+        }
+
+        .contenedor-ver-mas {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .btn-cargar-mas {
+            background-color: #a52a2a;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn-cargar-mas:hover {
+            background-color: #7a1f1f;
+        }
+        .btn-cargar-mas i {
+            margin-left: 8px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo-casa-espana.png" alt="Logo Casa de España" onerror="this.style.display='none'">
+                    <span>Casa de España en Taiwán</span>
+                </a>
+            </div>
+            
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li class="lang-switch"><a href="index.html">ES</a> | <a href="index-zh.html">中文</a></li>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li class="dropdown"><a href="#" class="dropbtn">Quiénes Somos <i class="fas fa-caret-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="bienvenida.html">Bienvenida del Presidente</a>
+                            <a href="presentacion.html">Presentación</a>
+                            <a href="equipo.html">Equipo Directivo</a>
+                            <a href="estatutos.html">Estatutos</a>
+                        </div>
+                    </li>
+                    <li><a href="actividades.html" class="active">Actividades</a></li>
+                    <li><a href="boletin.html">Boletín</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="hazte-socio.html" class="btn-nav">Hazte Socio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
         <section class="page-header">
             <div class="container">
                 <h1>Agenda de Actividades / 活動日程</h1>
@@ -29,10 +144,38 @@
             </section>
         </div>
 
-        </main>
+        <div id="zh" class="tab-content zh-text">
+            <section class="container past-events">
+                <h2 class="section-title-left"><i class="fas fa-history"></i> 活動回顧</h2>
+                
+                <div class="cards-grid" id="grid-zh">
+                    <p>Próximamente / 準備中...</p>
+                </div>
 
-    <script src="js/main.js"></script>
+            </section>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <h3>Casa de España en Taiwán</h3>
+                <p>Asociación cultural sin fines de lucro.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Enlaces Útiles</h4>
+                <ul>
+                    <li><a href="https://www.exteriores.gob.es/Consulados/taipei/es/Paginas/index.aspx" target="_blank">Sec. Consular de España</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Casa de España en Taiwán.</p>
+            </div>
+        </div>
+    </footer>
     
+    <script src="js/main.js"></script>
     <script src="js/datos-actividades.js"></script>
 
     <script>
@@ -40,17 +183,22 @@
             const contenedorGrid = document.getElementById('grid-es');
             const btnVerMas = document.getElementById('btn-ver-mas-es');
             
+            // Si por alguna razón listaActividades no carga, detenemos el script para evitar errores
+            if (typeof listaActividades === 'undefined') {
+                console.error("No se pudo cargar datos-actividades.js");
+                contenedorGrid.innerHTML = "<p>Error al cargar las actividades. Comprueba tu conexión.</p>";
+                return;
+            }
+
             let tarjetasVisibles = 0; 
             const tarjetasPorClic = 6;
 
-            // Función para dibujar las tarjetas en el HTML
             function renderizarTarjetas() {
                 const limite = tarjetasVisibles + tarjetasPorClic;
                 
                 for (let i = tarjetasVisibles; i < limite && i < listaActividades.length; i++) {
                     const actividad = listaActividades[i];
                     
-                    // Creamos el código HTML de cada tarjeta dinámicamente
                     const tarjetaHTML = `
                         <div class="card-item" style="animation: fadeIn 0.5s ease;">
                             <a href="${actividad.enlace}">
@@ -61,13 +209,11 @@
                         </div>
                     `;
                     
-                    // Lo inyectamos en el contenedor
                     contenedorGrid.innerHTML += tarjetaHTML;
                 }
                 
                 tarjetasVisibles = limite;
 
-                // Mostramos u ocultamos el botón dependiendo de si quedan artículos
                 if (tarjetasVisibles < listaActividades.length) {
                     btnVerMas.style.display = 'inline-block';
                 } else {
@@ -75,10 +221,12 @@
                 }
             }
 
-            // Pintar las primeras tarjetas al cargar la página
+            // Iniciar renderizado
             renderizarTarjetas();
 
-            // Asignar la función al botón
+            // Evento click
             btnVerMas.addEventListener('click', renderizarTarjetas);
         });
     </script>
+</body>
+</html>
